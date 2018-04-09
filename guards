@@ -1,153 +1,25 @@
 #!/usr/bin/gnuplot
 reset
 set terminal png
-set yrange [0:600]
-set xrange [0:600]
+set yrange [0:20]
+set xrange [0:20]
 unset colorbox
 set style arrow 1 nohead lc rgb 'black'
 set style arrow 2 nohead lc rgb 'red'
-set arrow from 372,278 to 334,302 as 1
-set arrow from 334,302 to 318,323 as 1
-set arrow from 318,323 to 324,363 as 1
-set arrow from 324,363 to 359,383 as 1
-set arrow from 359,383 to 383,365 as 1
-set arrow from 383,365 to 355,347 as 1
-set arrow from 355,347 to 354,322 as 1
-set arrow from 354,322 to 399,303 as 1
-set arrow from 399,303 to 415,336 as 1
-set arrow from 415,336 to 422,372 as 1
-set arrow from 422,372 to 380,405 as 1
-set arrow from 380,405 to 395,435 as 1
-set arrow from 395,435 to 449,448 as 1
-set arrow from 449,448 to 481,427 as 1
-set arrow from 481,427 to 478,381 as 1
-set arrow from 478,381 to 461,340 as 1
-set arrow from 461,340 to 512,338 as 1
-set arrow from 512,338 to 517,376 as 1
-set arrow from 517,376 to 513,424 as 1
-set arrow from 513,424 to 540,432 as 1
-set arrow from 540,432 to 566,424 as 1
-set arrow from 566,424 to 577,394 as 1
-set arrow from 577,394 to 548,349 as 1
-set arrow from 548,349 to 530,305 as 1
-set arrow from 530,305 to 558,261 as 1
-set arrow from 558,261 to 563,228 as 1
-set arrow from 563,228 to 470,241 as 1
-set arrow from 470,241 to 492,270 as 1
-set arrow from 492,270 to 481,298 as 1
-set arrow from 481,298 to 437,309 as 1
-set arrow from 437,309 to 431,267 as 1
-set arrow from 431,267 to 431,224 as 1
-set arrow from 431,224 to 524,177 as 1
-set arrow from 524,177 to 572,170 as 1
-set arrow from 572,170 to 579,117 as 1
-set arrow from 579,117 to 546,56 as 1
-set arrow from 546,56 to 440,38 as 1
-set arrow from 440,38 to 397,38 as 1
-set arrow from 397,38 to 392,49 as 1
-set arrow from 392,49 to 491,67 as 1
-set arrow from 491,67 to 517,86 as 1
-set arrow from 517,86 to 530,118 as 1
-set arrow from 530,118 to 490,131 as 1
-set arrow from 490,131 to 466,120 as 1
-set arrow from 466,120 to 444,104 as 1
-set arrow from 444,104 to 415,154 as 1
-set arrow from 415,154 to 398,199 as 1
-set arrow from 398,199 to 398,249 as 1
-set arrow from 398,249 to 381,269 as 1
-set arrow from 381,269 to 365,248 as 1
-set arrow from 365,248 to 339,194 as 1
-set arrow from 339,194 to 366,135 as 1
-set arrow from 366,135 to 347,98 as 1
-set arrow from 347,98 to 290,69 as 1
-set arrow from 290,69 to 260,47 as 1
-set arrow from 260,47 to 228,40 as 1
-set arrow from 228,40 to 212,51 as 1
-set arrow from 212,51 to 231,69 as 1
-set arrow from 231,69 to 274,78 as 1
-set arrow from 274,78 to 317,113 as 1
-set arrow from 317,113 to 322,137 as 1
-set arrow from 322,137 to 311,166 as 1
-set arrow from 311,166 to 277,190 as 1
-set arrow from 277,190 to 246,163 as 1
-set arrow from 246,163 to 212,124 as 1
-set arrow from 212,124 to 164,111 as 1
-set arrow from 164,111 to 122,107 as 1
-set arrow from 122,107 to 119,117 as 1
-set arrow from 119,117 to 94,138 as 1
-set arrow from 94,138 to 94,178 as 1
-set arrow from 94,178 to 92,214 as 1
-set arrow from 92,214 to 90,246 as 1
-set arrow from 90,246 to 112,269 as 1
-set arrow from 112,269 to 132,248 as 1
-set arrow from 132,248 to 125,211 as 1
-set arrow from 125,211 to 152,182 as 1
-set arrow from 152,182 to 189,178 as 1
-set arrow from 189,178 to 231,196 as 1
-set arrow from 231,196 to 283,226 as 1
-set arrow from 283,226 to 324,251 as 1
-set arrow from 324,251 to 300,263 as 1
-set arrow from 300,263 to 258,285 as 1
-set arrow from 258,285 to 202,303 as 1
-set arrow from 202,303 to 169,311 as 1
-set arrow from 169,311 to 130,314 as 1
-set arrow from 130,314 to 95,332 as 1
-set arrow from 95,332 to 88,377 as 1
-set arrow from 88,377 to 88,401 as 1
-set arrow from 88,401 to 119,423 as 1
-set arrow from 119,423 to 177,436 as 1
-set arrow from 177,436 to 188,448 as 1
-set arrow from 188,448 to 194,445 as 1
-set arrow from 194,445 to 165,398 as 1
-set arrow from 165,398 to 130,392 as 1
-set arrow from 130,392 to 134,355 as 1
-set arrow from 134,355 to 190,336 as 1
-set arrow from 190,336 to 227,337 as 1
-set arrow from 227,337 to 266,345 as 1
-set arrow from 266,345 to 277,402 as 1
-set arrow from 277,402 to 293,422 as 1
-set arrow from 293,422 to 314,396 as 1
-set arrow from 314,396 to 282,349 as 1
-set arrow from 282,349 to 287,336 as 1
-set arrow from 287,336 to 290,310 as 1
-set arrow from 290,310 to 313,292 as 1
-set arrow from 313,292 to 334,273 as 1
-set arrow from 334,273 to 351,261 as 1
-set arrow from 351,261 to 372,278 as 1
-set object circle at 318,323 size first 4 fc rgb 'navy'
-set object circle at 383,365 size first 4 fc rgb 'navy'
-set object circle at 415,336 size first 4 fc rgb 'navy'
-set object circle at 395,435 size first 4 fc rgb 'navy'
-set object circle at 478,381 size first 4 fc rgb 'navy'
-set object circle at 513,424 size first 4 fc rgb 'navy'
-set object circle at 548,349 size first 4 fc rgb 'navy'
-set object circle at 470,241 size first 4 fc rgb 'navy'
-set object circle at 481,298 size first 4 fc rgb 'navy'
-set object circle at 431,267 size first 4 fc rgb 'navy'
-set object circle at 572,170 size first 4 fc rgb 'navy'
-set object circle at 392,49 size first 4 fc rgb 'navy'
-set object circle at 517,86 size first 4 fc rgb 'navy'
-set object circle at 490,131 size first 4 fc rgb 'navy'
-set object circle at 444,104 size first 4 fc rgb 'navy'
-set object circle at 398,199 size first 4 fc rgb 'navy'
-set object circle at 347,98 size first 4 fc rgb 'navy'
-set object circle at 228,40 size first 4 fc rgb 'navy'
-set object circle at 231,69 size first 4 fc rgb 'navy'
-set object circle at 322,137 size first 4 fc rgb 'navy'
-set object circle at 277,190 size first 4 fc rgb 'navy'
-set object circle at 212,124 size first 4 fc rgb 'navy'
-set object circle at 122,107 size first 4 fc rgb 'navy'
-set object circle at 94,178 size first 4 fc rgb 'navy'
-set object circle at 112,269 size first 4 fc rgb 'navy'
-set object circle at 125,211 size first 4 fc rgb 'navy'
-set object circle at 283,226 size first 4 fc rgb 'navy'
-set object circle at 258,285 size first 4 fc rgb 'navy'
-set object circle at 88,401 size first 4 fc rgb 'navy'
-set object circle at 177,436 size first 4 fc rgb 'navy'
-set object circle at 134,355 size first 4 fc rgb 'navy'
-set object circle at 227,337 size first 4 fc rgb 'navy'
-set object circle at 293,422 size first 4 fc rgb 'navy'
-set object circle at 282,349 size first 4 fc rgb 'navy'
-set object circle at 290,310 size first 4 fc rgb 'navy'
-set object circle at 351,261 size first 4 fc rgb 'navy'
+set arrow from 2.000000,2.000000 to 8.000000,9.000000 as 1
+set arrow from 8.000000,9.000000 to 6.000000,0.000000 as 1
+set object circle at 8.000000,9.000000 size first 0.3 fc rgb 'navy'
+set arrow from 6.000000,0.000000 to 12.000000,4.000000 as 1
+set arrow from 12.000000,4.000000 to 10.000000,4.000000 as 1
+set object circle at 12.000000,4.000000 size first 0.3 fc rgb 'navy'
+set arrow from 10.000000,4.000000 to 10.000000,12.000000 as 1
+set arrow from 10.000000,12.000000 to 6.000000,9.000000 as 1
+set arrow from 6.000000,9.000000 to 6.000000,14.000000 as 1
+set arrow from 6.000000,14.000000 to 2.000000,11.000000 as 1
+set object circle at 6.000000,14.000000 size first 0.3 fc rgb 'navy'
+set arrow from 2.000000,11.000000 to 4.000000,11.000000 as 1
+set arrow from 4.000000,11.000000 to 0.000000,8.000000 as 1
+set arrow from 0.000000,8.000000 to 4.000000,8.000000 as 1
+set object circle at 0.000000,8.000000 size first 0.3 fc rgb 'navy'
+set arrow from 4.000000,8.000000 to 2.000000,2.000000 as 1
 plot NaN notitle

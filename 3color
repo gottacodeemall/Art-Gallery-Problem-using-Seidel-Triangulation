@@ -36,4 +36,16 @@ set arrow from 6.000000,0.000000 to 8.000000,9.000000 as 1
 set arrow from 6.000000,0.000000 to 12.000000,4.000000 as 1
 set arrow from 12.000000,4.000000 to 10.000000,4.000000 as 1
 set arrow from 6.000000,0.000000 to 10.000000,4.000000 as 1
+set object circle at 2.000000,2.000000 size first 0.3 fc rgb 'navy'
+set object circle at 8.000000,9.000000 size first 0.3 fc rgb 'red'
+set object circle at 6.000000,0.000000 size first 0.3 fc rgb 'green'
+set object circle at 12.000000,4.000000 size first 0.3 fc rgb 'red'
+set object circle at 10.000000,4.000000 size first 0.3 fc rgb 'navy'
+set object circle at 10.000000,12.000000 size first 0.3 fc rgb 'green'
+set object circle at 6.000000,9.000000 size first 0.3 fc rgb 'navy'
+set object circle at 6.000000,14.000000 size first 0.3 fc rgb 'red'
+set object circle at 2.000000,11.000000 size first 0.3 fc rgb 'navy'
+set object circle at 4.000000,11.000000 size first 0.3 fc rgb 'green'
+set object circle at 0.000000,8.000000 size first 0.3 fc rgb 'red'
+set object circle at 4.000000,8.000000 size first 0.3 fc rgb 'green'
 plot NaN notitle
