@@ -87,7 +87,6 @@ int read_segments(const char *filename, int *genus)
         for (j = 0; j < npoints; j++, i++)
         {
             fscanf(infile, "%lf%lf", &seg[i].v0.x, &seg[i].v0.y);
-            printf("i: %d, v0.x: %lf,v0.y: %lf\n",i,seg[i].v0.x,seg[i].v0.y);
             if (i == last)
             {
                 seg[i].next = first;

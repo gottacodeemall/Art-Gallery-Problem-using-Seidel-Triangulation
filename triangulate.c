@@ -84,8 +84,8 @@ int main(int argc, const char *argv[])
          fprintf(fp,"#!/usr/bin/gnuplot\n");
          fprintf(fp,"reset\n");
          fprintf(fp,"set terminal png\n");
-         fprintf(fp,"set yrange [0:20]\n");
-         fprintf(fp,"set xrange [0:20]\n");
+         fprintf(fp,"set yrange [-2:30]\n");
+         fprintf(fp,"set xrange [-2:30]\n");
          fprintf(fp,"unset colorbox\n");
          fprintf(fp,"set style arrow 1 nohead lc rgb \'black\'\n");
          fprintf(fp,"set style arrow 2 nohead lc rgb \'red\'\n");
@@ -119,61 +119,84 @@ int main(int argc, const char *argv[])
     }
     printf("c1: %d c2: %d c3:%d \n",s1,s2,s3);
 int index;
+int ans;
   if(s1<s2&&s1<s3){
     index=0;  
+    ans=s1;
   }
   else if(s2<s1&&s2<s3){
-    index=1;  
+    index=1;
+    ans=s2;  
   }
   else{
-    index=2; 
+    index=2;
+    ans=s3; 
   }
+    FILE *fp2;
+    fp2= fopen("org", "w");
     fp = fopen("guards", "w");
          fprintf(fp,"#!/usr/bin/gnuplot\n");
          fprintf(fp,"reset\n");
          fprintf(fp,"set terminal png\n");
-         fprintf(fp,"set yrange [0:20]\n");
-         fprintf(fp,"set xrange [0:20]\n");
+         fprintf(fp,"set yrange [-2:30]\n");
+         fprintf(fp,"set xrange [-2:30]\n");
          fprintf(fp,"unset colorbox\n");
          fprintf(fp,"set style arrow 1 nohead lc rgb \'black\'\n");
          fprintf(fp,"set style arrow 2 nohead lc rgb \'red\'\n");
-
+         fprintf(fp2,"#!/usr/bin/gnuplot\n");
+         fprintf(fp2,"reset\n");
+         fprintf(fp2,"set terminal png\n");
+         fprintf(fp2,"set yrange [-2:30]\n");
+         fprintf(fp2,"set xrange [-2:30]\n");
+         fprintf(fp2,"unset colorbox\n");
+         fprintf(fp2,"set style arrow 1 nohead lc rgb \'black\'\n");
+         fprintf(fp2,"set style arrow 2 nohead lc rgb \'red\'\n");
     for (i = 1; i <= numpoints; i++) {
-        if(i==numpoints)
+        if(i==numpoints){
             fprintf(fp,"set arrow from %lf,%lf to %lf,%lf as 1\n",seg[i].v0.x,seg[i].v0.y,seg[1].v0.x,seg[1].v0.y);
-        else
+            fprintf(fp2,"set arrow from %lf,%lf to %lf,%lf as 1\n",seg[i].v0.x,seg[i].v0.y,seg[1].v0.x,seg[1].v0.y);
+        }
+        else{
             fprintf(fp,"set arrow from %lf,%lf to %lf,%lf as 1\n",seg[i].v0.x,seg[i].v0.y,seg[i+1].v0.x,seg[i+1].v0.y);
+            fprintf(fp2,"set arrow from %lf,%lf to %lf,%lf as 1\n",seg[i].v0.x,seg[i].v0.y,seg[i+1].v0.x,seg[i+1].v0.y);
+        }
         if(index==color[i-1]){
             fprintf(fp,"set object circle at %lf,%lf size first 0.3 fc rgb 'navy'\n",seg[i].v0.x,seg[i].v0.y);
         }
     }
     fprintf(fp,"plot NaN notitle\n");
+    fprintf(fp2,"plot NaN notitle\n");
     fclose(fp);
+    fclose(fp2);
 
     fp = fopen("3color", "w");
          fprintf(fp,"#!/usr/bin/gnuplot\n");
          fprintf(fp,"reset\n");
          fprintf(fp,"set terminal png\n");
-         fprintf(fp,"set yrange [0:20]\n");
-         fprintf(fp,"set xrange [0:20]\n");
+         fprintf(fp,"set yrange [-2:30]\n");
+         fprintf(fp,"set xrange [-2:30]\n");
          fprintf(fp,"unset colorbox\n");
          fprintf(fp,"set style arrow 1 nohead lc rgb \'black\'\n");
          fprintf(fp,"set style arrow 2 nohead lc rgb \'red\'\n");
     for (i = 0; i < ntriangles; i++) {
-        printf("triangle #%d: %d %d %d\n", i, op[i][0], op[i][1], op[i][2]);
         fprintf(fp,"set arrow from %lf,%lf to %lf,%lf as 1\n",seg[op[i][0]].v0.x,seg[op[i][0]].v0.y,seg[op[i][1]].v0.x,seg[op[i][1]].v0.y);
         fprintf(fp,"set arrow from %lf,%lf to %lf,%lf as 1\n",seg[op[i][1]].v0.x,seg[op[i][1]].v0.y,seg[op[i][2]].v0.x,seg[op[i][2]].v0.y);
         fprintf(fp,"set arrow from %lf,%lf to %lf,%lf as 1\n",seg[op[i][0]].v0.x,seg[op[i][0]].v0.y,seg[op[i][2]].v0.x,seg[op[i][2]].v0.y);
     }
+
+    printf("Minimum number of guards required are: %d\n",ans);
     for (i = 1; i <= numpoints; i++) {
         if(color[i-1]==1){
             fprintf(fp,"set object circle at %lf,%lf size first 0.3 fc rgb 'navy'\n",seg[i].v0.x,seg[i].v0.y);
+            printf("guard at %lf %lf\n",seg[i].v0.x,seg[i].v0.y);
         }
         else if(color[i-1]==2){
             fprintf(fp,"set object circle at %lf,%lf size first 0.3 fc rgb 'red'\n",seg[i].v0.x,seg[i].v0.y);
+            printf("guard at %lf %lf\n",seg[i].v0.x,seg[i].v0.y);
         }
         else{
             fprintf(fp,"set object circle at %lf,%lf size first 0.3 fc rgb 'green'\n",seg[i].v0.x,seg[i].v0.y);
+            printf("guard at %lf %lf\n",seg[i].v0.x,seg[i].v0.y);
         }
     }
     fprintf(fp,"plot NaN notitle\n");

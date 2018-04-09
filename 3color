@@ -1,11 +1,17 @@
 #!/usr/bin/gnuplot
 reset
 set terminal png
-set yrange [0:20]
-set xrange [0:20]
+set yrange [-2:30]
+set xrange [-2:30]
 unset colorbox
 set style arrow 1 nohead lc rgb 'black'
 set style arrow 2 nohead lc rgb 'red'
+set arrow from 4.000000,11.000000 to 6.000000,14.000000 as 1
+set arrow from 6.000000,14.000000 to 2.000000,11.000000 as 1
+set arrow from 4.000000,11.000000 to 2.000000,11.000000 as 1
+set arrow from 4.000000,11.000000 to 6.000000,9.000000 as 1
+set arrow from 6.000000,9.000000 to 6.000000,14.000000 as 1
+set arrow from 4.000000,11.000000 to 6.000000,14.000000 as 1
 set arrow from 0.000000,8.000000 to 4.000000,8.000000 as 1
 set arrow from 4.000000,8.000000 to 6.000000,9.000000 as 1
 set arrow from 0.000000,8.000000 to 6.000000,9.000000 as 1
@@ -18,12 +24,6 @@ set arrow from 8.000000,9.000000 to 4.000000,8.000000 as 1
 set arrow from 8.000000,9.000000 to 4.000000,8.000000 as 1
 set arrow from 4.000000,8.000000 to 2.000000,2.000000 as 1
 set arrow from 8.000000,9.000000 to 2.000000,2.000000 as 1
-set arrow from 6.000000,14.000000 to 4.000000,11.000000 as 1
-set arrow from 4.000000,11.000000 to 6.000000,9.000000 as 1
-set arrow from 6.000000,14.000000 to 6.000000,9.000000 as 1
-set arrow from 6.000000,14.000000 to 2.000000,11.000000 as 1
-set arrow from 2.000000,11.000000 to 4.000000,11.000000 as 1
-set arrow from 6.000000,14.000000 to 4.000000,11.000000 as 1
 set arrow from 8.000000,9.000000 to 10.000000,12.000000 as 1
 set arrow from 10.000000,12.000000 to 6.000000,9.000000 as 1
 set arrow from 8.000000,9.000000 to 6.000000,9.000000 as 1
@@ -36,16 +36,16 @@ set arrow from 6.000000,0.000000 to 8.000000,9.000000 as 1
 set arrow from 6.000000,0.000000 to 12.000000,4.000000 as 1
 set arrow from 12.000000,4.000000 to 10.000000,4.000000 as 1
 set arrow from 6.000000,0.000000 to 10.000000,4.000000 as 1
-set object circle at 2.000000,2.000000 size first 0.3 fc rgb 'navy'
-set object circle at 8.000000,9.000000 size first 0.3 fc rgb 'red'
-set object circle at 6.000000,0.000000 size first 0.3 fc rgb 'green'
-set object circle at 12.000000,4.000000 size first 0.3 fc rgb 'red'
-set object circle at 10.000000,4.000000 size first 0.3 fc rgb 'navy'
-set object circle at 10.000000,12.000000 size first 0.3 fc rgb 'green'
-set object circle at 6.000000,9.000000 size first 0.3 fc rgb 'navy'
-set object circle at 6.000000,14.000000 size first 0.3 fc rgb 'red'
-set object circle at 2.000000,11.000000 size first 0.3 fc rgb 'navy'
-set object circle at 4.000000,11.000000 size first 0.3 fc rgb 'green'
-set object circle at 0.000000,8.000000 size first 0.3 fc rgb 'red'
-set object circle at 4.000000,8.000000 size first 0.3 fc rgb 'green'
+set object circle at 0.000000,8.000000 size first 0.3 fc rgb 'navy'
+set object circle at 4.000000,8.000000 size first 0.3 fc rgb 'red'
+set object circle at 2.000000,2.000000 size first 0.3 fc rgb 'green'
+set object circle at 8.000000,9.000000 size first 0.3 fc rgb 'navy'
+set object circle at 6.000000,0.000000 size first 0.3 fc rgb 'red'
+set object circle at 12.000000,4.000000 size first 0.3 fc rgb 'navy'
+set object circle at 10.000000,4.000000 size first 0.3 fc rgb 'green'
+set object circle at 10.000000,12.000000 size first 0.3 fc rgb 'red'
+set object circle at 6.000000,9.000000 size first 0.3 fc rgb 'green'
+set object circle at 6.000000,14.000000 size first 0.3 fc rgb 'navy'
+set object circle at 2.000000,11.000000 size first 0.3 fc rgb 'green'
+set object circle at 4.000000,11.000000 size first 0.3 fc rgb 'red'
 plot NaN notitle
